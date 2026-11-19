@@ -26,6 +26,6 @@ GET / POST / PATCH / PUT / DELETE / HEAD / OPTIONS / CONNECT / TRACE
 /post/me/:uuid      PATCH       Atualizar um post       JWT
 /post/me/:uuid      DELETE      Apagar um post          JWT
 
-/upload              POST        Enviar imagem           JWT
-/uploads/img.jpg     GET/NGINX   Ver imagem              Aberta
+/upload             POST        Enviar imagem           JWT
+/uploads/img.jpg    GET/NGINX   Ver imagem              Aberta
 ```
