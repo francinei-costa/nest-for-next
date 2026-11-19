@@ -139,3 +139,5 @@ Content-Type: image/png
 GET {{imageUrl}}
 
 ###############################################################################
+
+POST http://localhost:3000/auth/login

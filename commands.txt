@@ -1,0 +1,24 @@
+# help
+npx nest --help
+
+# criando o porjeto
+npm i -g @nestjs/cli ou npx @nestjs/cli
+nest new nest-for-next
+
+# comando para criar o arquivo na estrutura de pastas
+# precisa esta na pasta /src
+nest g module auth
+nest g controller auth
+nest g service auth
+ou
+npx nest g mo users
+npx nest g co user
+npx nest g s user
+
+# criando classes
+npx nest g cl user/entities/user.entity --flat --no-spec
+# criando dto
+npx nest g cl user/dto/create-user.dto --flat --no-spec
+
+# criando um resource / CRUD
+npx nest g res post
