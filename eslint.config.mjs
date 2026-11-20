@@ -19,7 +19,9 @@ export default tseslint.config(
       },
       sourceType: 'commonjs',
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ['test/*.*', '*.js', '*.mjs'], // <-- CORREÇÃO AQUI
+        },
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -29,7 +31,12 @@ export default tseslint.config(
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-floating-promises': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'warn',
-      "prettier/prettier": ["error", { endOfLine: "auto" }],
+      'prettier/prettier': ['error', { endOfLine: 'auto' }],
     },
+  },
+  // Opcional mas melhor: desliga type-check nos testes e2e
+  {
+    files: ['test/**/*.ts'],
+    extends: [tseslint.configs.disableTypeChecked],
   },
 );
