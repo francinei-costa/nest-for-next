@@ -18,7 +18,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     TypeOrmModule.forRoot({
       type: 'postgres',
       //conexão com o banco de dados na nuvem
-      synchronize: process.env.DB_SYNCHRONIZE === '1', //true,
+      synchronize: true,
       url: process.env.DATABASE_URL,
       // host: process.env.DB_HOST,
       // port: 5432,
@@ -26,7 +26,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       // password: process.env.DB_PASSWORD,
       // database: process.env.DB_DATABASE,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      autoLoadEntities: process.env.DB_AUTO_LOAD_ENTITIES === '1', // false,
+      autoLoadEntities: false,
     }),
   ],
   controllers: [AppController],

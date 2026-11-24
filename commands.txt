@@ -28,6 +28,7 @@ npm i @nestjs/config
 npm i class-transformer class-validator
 npm i @nestjs/mapped-types @nestjs/typeorm pg typeorm
 npm i bcryptjs
+npm i @nestjs/jwt
 
 # migração com typeORM
 npm run migration:create --name=nome
